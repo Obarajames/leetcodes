@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Counter Example</h1>
+    <button id="counterButton">Click Me!</button>
+    <p id="counterResult">Counter Value: 0</p>
+    
+    <script>
+       let counter = 0;
+        const addCounter = function(initialValue) {
+
+            return ++counter
+         
+         }
+        const button = document.getElementById('counterButton');
+        const result = document.getElementById('counterResult');
+
+        button.addEventListener("click",() => {
+            const currentValue = addCounter();
+            console.log(currentValue)
+            result.textContent = `Counter Value: ${currentValue}`;
+        } )
+
+    </script>
+</body>
+</html>
